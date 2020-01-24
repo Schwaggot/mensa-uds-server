@@ -6,7 +6,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 
 public class App {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         DataProvider.getInstance().update();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -26,8 +26,6 @@ public class App {
             jettyServer.join();
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            jettyServer.destroy();
         }
     }
 }

@@ -64,10 +64,6 @@ public class XMLParser {
         abbreviations.put("Wt", "Weichtiere");
     }
 
-    public static void main(String argv[]) {
-
-    }
-
     // public static Day[] parseFile(File fXmlFile) throws SAXException, IOException, ParserConfigurationException {
     public static Day[] parseFile(InputStream fXmlFile) throws SAXException, IOException, ParserConfigurationException {
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

@@ -77,6 +77,4 @@ public class RestAPI {
                 throw new IllegalArgumentException("location must be sb or hom");
         }
     }
-
-
 }

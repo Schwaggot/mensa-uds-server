@@ -25,3 +25,6 @@ hs_err_pid*
 # ignore IntelliJ IDEA
 .idea
 *.iml
+
+# ignore gradle stuff
+.gradle

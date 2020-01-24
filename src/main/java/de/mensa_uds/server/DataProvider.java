@@ -150,7 +150,6 @@ public class DataProvider {
             String openingTimesSB = readFile("opening_sb.html");
             String openingTimesHOM = readFile("opening_hom.html");
 
-
             MenuStatus menuStatus = new MenuStatus();
             menuStatus.setTimestamp(timestamp);
 
