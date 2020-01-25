@@ -1,2 +1,3 @@
 #!/bin/bash
-gradle run
+git pull
+./gradlew run
