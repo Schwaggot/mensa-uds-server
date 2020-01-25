@@ -31,8 +31,6 @@ public class DataProvider {
     private static final ReentrantReadWriteLock lock = new ReentrantReadWriteLock(true);
 
     private static DataProvider instance = null;
-    private Timer timer;
-    private TimerTask updateTask;
 
     private MenuStatus menuStatus;
     private Menu menuSB;
@@ -42,7 +40,7 @@ public class DataProvider {
     private String openingTimesHOM;
 
     protected DataProvider() {
-        updateTask = new TimerTask() {
+        TimerTask updateTask = new TimerTask() {
 
             @Override
             public void run() {
@@ -68,7 +66,7 @@ public class DataProvider {
         SimpleDateFormat ft = new SimpleDateFormat("E dd.MM.yyyy 'at' hh:mm:ss a zzz");
         System.out.println("scheduling next regular update for " + ft.format(calendar.getTime()));
 
-        timer = new Timer();
+        Timer timer = new Timer();
         timer.scheduleAtFixedRate(updateTask, calendar.getTime(), 15 * 60 * 1000);
     }
 
