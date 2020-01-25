@@ -23,8 +23,7 @@ public class RestAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public String getMenuStatus() {
         Gson gson = new Gson();
-        String jsonObj = gson.toJson(DataProvider.getInstance().getMenuStatus());
-        return jsonObj;
+        return gson.toJson(DataProvider.getInstance().getMenuStatus());
     }
 
     @GET
@@ -54,8 +53,7 @@ public class RestAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public String getOpeningTimesStatus() {
         Gson gson = new Gson();
-        String jsonObj = gson.toJson(DataProvider.getInstance().getOpeningTimesStatus());
-        return jsonObj;
+        return gson.toJson(DataProvider.getInstance().getOpeningTimesStatus());
     }
 
     @GET
