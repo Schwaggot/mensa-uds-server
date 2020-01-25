@@ -8,7 +8,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("mensa_uds/api/v1")
+@Path("mensaar/api/v1")
 public class RestAPI {
 
     @GET
