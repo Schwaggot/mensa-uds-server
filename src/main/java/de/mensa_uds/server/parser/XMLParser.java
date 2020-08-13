@@ -25,7 +25,7 @@ public class XMLParser {
 
     static {
         abbreviations.put("1", "mit Farbstoff");
-        abbreviations.put("2", "mit Konservierungsstoffe");
+        abbreviations.put("2", "mit Konservierungsstoffen");
         abbreviations.put("3", "mit Antioxidationsmittel");
         abbreviations.put("4", "mit Geschmacksverstärker");
         abbreviations.put("5", "geschwefelt");
@@ -47,21 +47,34 @@ public class XMLParser {
         abbreviations.put("21", "laktosefrei");
         abbreviations.put("22", "veganes Essen");
         abbreviations.put("23", "Fisch aus nachhaltigem Fang");
+        abbreviations.put("24", "aus zum Teil fein zerkleinertem Fleisch");
 
-        abbreviations.put("Gl", "Glutenhaltiges Getreide");
-        abbreviations.put("Kr", "Krebstiere, Krusten- und Schalentiere");
-        abbreviations.put("Ei", "Ei");
+        abbreviations.put("En", "Erdnuss");
         abbreviations.put("Fi", "Fisch");
-        abbreviations.put("En", "Erdnüsse");
-        abbreviations.put("So", "Soja");
+        abbreviations.put("Ei", "Hühnerei");
+        abbreviations.put("Kr", "Krebstiere, Krusten- und Schalentiere");
+        abbreviations.put("Lu", "Lupine");
         abbreviations.put("La", "Milch und Lactose");
-        abbreviations.put("Nu", "Schalenfrüchte (Nüsse)");
+        abbreviations.put("Sw", "Schwefeldioxid/Sulfite");
         abbreviations.put("Sl", "Sellerie");
         abbreviations.put("Sf", "Senf");
-        abbreviations.put("Se", "Sesamsamen");
-        abbreviations.put("Sw", "Schwefeldioxid/Sulfite");
-        abbreviations.put("Lu", "Lupinen");
+        abbreviations.put("Se", "Sesam");
+        abbreviations.put("So", "Soja");
         abbreviations.put("Wt", "Weichtiere");
+        abbreviations.put("We", "Weizen");
+        abbreviations.put("Ro", "Roggen");
+        abbreviations.put("Ge", "Gerste");
+        abbreviations.put("Ha", "Hafer");
+        abbreviations.put("Di", "Dinkel");
+        abbreviations.put("Ka", "Kamut");
+        abbreviations.put("Ma", "Mandel");
+        abbreviations.put("Has", "Haselnüsse");
+        abbreviations.put("Wa", "Walnüsse");
+        abbreviations.put("Kas", "Kaschunüsse");
+        abbreviations.put("Pe", "Pecannüsse");
+        abbreviations.put("Pa", "Paranüsse");
+        abbreviations.put("Pi", "Pistazien");
+        abbreviations.put("Mq", "Macadamia- oder Queenslandnüsse");
     }
 
     // public static Day[] parseFile(File fXmlFile) throws SAXException, IOException, ParserConfigurationException {
@@ -278,7 +291,7 @@ public class XMLParser {
         String pattern = "(.*)\\((.*)\\).*";
 
         if (str.contains("(")) {
-            String value = str.replaceAll(pattern,"$1");
+            String value = str.replaceAll(pattern, "$1");
             String substring = str.replaceAll(pattern, "$2");
             substring = substring.replace("(", "").replace(")", "");
 
