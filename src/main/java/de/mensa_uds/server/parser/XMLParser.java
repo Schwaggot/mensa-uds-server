@@ -275,12 +275,11 @@ public class XMLParser {
 
     private static SpecialString convertToSpecialString(String str) {
         SpecialString ss = new SpecialString();
+        String pattern = "(.*)\\((.*)\\).*";
 
         if (str.contains("(")) {
-            int idxStart = str.indexOf("(");
-            int idxStop = str.indexOf(")");
-            String value = str.substring(0, idxStart) + str.substring(idxStop + 1);
-            String substring = str.substring(idxStart, idxStop + 1);
+            String value = str.replaceAll(pattern,"$1");
+            String substring = str.replaceAll(pattern, "$2");
             substring = substring.replace("(", "").replace(")", "");
 
             String[] split = substring.split(",");
