@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'de.mensa_uds'
-version '1.1'
+version '1.1.1'
 
 sourceCompatibility = 1.8
 
@@ -13,16 +13,16 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.26.v20200117'
-    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.26.v20200117'
-    compile group: 'org.eclipse.jetty', name: 'jetty-util', version: '9.4.26.v20200117'
-    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.30'
-    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.30'
-    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.30'
-    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.30'
-    compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.30'
-    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
-    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.44.v20210927'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.44.v20210927'
+    implementation group: 'org.eclipse.jetty', name: 'jetty-util', version: '9.4.44.v20210927'
+    implementation group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.35'
+    implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.35'
+    implementation group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-http', version: '2.35'
+    implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.35'
+    implementation group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.35'
+    implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.9'
 }
 
 mainClassName = 'de.mensa_uds.server.App'
